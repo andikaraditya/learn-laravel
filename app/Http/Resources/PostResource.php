@@ -19,6 +19,7 @@ class PostResource extends JsonResource
             "title" => $this->title,
             "news_content" => $this->news_content,
             "created_at" => date("d-m-Y", strtotime($this->created_at)),
+            "user" => $this->whenLoaded("user"),
             ];
     }
 }
